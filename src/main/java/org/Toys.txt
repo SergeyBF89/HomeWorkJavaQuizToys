@@ -1,0 +1,5 @@
+Toys: id = 4: name: Конструктор Lego: weight: 150.0
+Toys: id = 5: name: Набор солдатиков: weight: 120.0
+Toys: id = 2: name: Кукла Барби: weight: 80.0
+Toys: id = 3: name: Плюшевый мишка: weight: 90.0
+Toys: id = 1: name: Машинка Гоночная: weight: 150.0

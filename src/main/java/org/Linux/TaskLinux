@@ -1,0 +1,54 @@
+sergey@sergey-linux:~$ mkdir Игрушки_для_дошколят
+sergey@sergey-linux:~$ mkdir Игрушки_для_Школьников
+sergey@sergey-linux:~$ cd Игрушки_для_Школьников
+sergey@sergey-linux:~/Игрушки_для_Школьников$ > Роботы
+sergey@sergey-linux:~/Игрушки_для_Школьников$ > Конструктор
+sergey@sergey-linux:~/Игрушки_для_Школьников$ > Настольные_Игры
+sergey@sergey-linux:~/Игрушки_для_дошколят$ > Мягкие_Игрушки
+sergey@sergey-linux:~/Игрушки_для_дошколят$ > Куклы
+sergey@sergey-linux:~/Игрушки_для_дошколят$ > Машинки
+sergey@sergey-linux:~$ sudo snap install tree
+[sudo] пароль для sergey:
+tree 1.8.0+pkg-3fd6 от ???(Buo-ren, Lin) (brlin) установлен
+sergey@sergey-linux:~$ mkdir Имя_Игрушки
+??? Имя_Игрушки
+?   ??? Игрушки_для_дошколят
+?   ?   ??? Куклы
+?   ?   ??? Машинки
+?   ?   ??? Мягкие_Игрушки
+?   ??? Игрушки_для_Школьников
+?       ??? Конструктор
+?       ??? Настольные
+?       ??? Настольные_Игры
+?       ??? Роботы
+sergey@sergey-linux:~$ mv Имя_Игрушки/ Игрушки
+??? Игрушки
+?   ??? Игрушки_для_дошколят
+?   ?   ??? Куклы
+?   ?   ??? Машинки
+?   ?   ??? Мягкие_Игрушки
+?   ??? Игрушки_для_Школьников
+?       ??? Конструктор
+?       ??? Настольные
+?       ??? Настольные_Игры
+?       ??? Роботы
+sergey@sergey-linux:~$ cd Игрушки
+??? [sergey  ]  Игрушки_для_дошколят
+?   ??? [sergey  ]  Куклы
+?   ??? [sergey  ]  Машинки
+?   ??? [sergey  ]  Мягкие_Игрушки
+??? [sergey  ]  Игрушки_для_Школьников
+    ??? [sergey  ]  Конструктор
+    ??? [sergey  ]  Настольные
+    ??? [sergey  ]  Настольные_Игры
+    ??? [sergey  ]  Роботы
+sergey@sergey-linux:~/Игрушки$ sudo snap remove tree
+sergey@sergey-linux:~/Игрушки$ sudo vi /usr/local/bin/script.sh
+#!/bin/bash
+echo $(date) >> /var/log/testcron.log
+ :w!
+ :q
+ sergey@sergey-linux:~/Игрушки$ sudo chmod ugo+x /usr/local/bin/script.sh
+ sergey@sergey-linux:~/Игрушки$ sudo crontab -e
+  0/3 * *  ** /usr/local/bin/script.sh
+ crontab: installing new crontab
